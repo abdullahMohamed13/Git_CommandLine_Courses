@@ -1,0 +1,55 @@
+Terminal: The invironment of the input/output
+Shell: The translator of the terminal
+CMD: Default terminal of windows
+PowerShell: After CMD
+GUI: Graphical User Interface
+
+=============================================================================================
+
+clear / cls: clear terminal
+cd: change directory
+md / mkdir: make directory
+ls / dir: list (The  directories that in this folder)
+
+=============================================================================================
+
+move / mv: rename and move a dir on Windows (There is mv on linux and mac)
+rename: just rename the directory
+anyCommand --help: display all you need about this command (Must learn)
+-r: meaning recursive, if you want copy or remove a directory and it is not empty use this, this will copy or remove all files in it
+-d: if you want copy or remove a directory and it is empty use this
+cp: copy a folder (Must type -r after cp ( cp -r folderName folderName2)
+rm: removes directory
+
+=============================================================================================
+
+echo: make strings inside a file by using > to override what ever typed in / or using >> to add string and do not override
+cat: print the strings that echo does / can also work as copy (Can copy all files that echo did and put it into a new file)
+
+=============================================================================================
+
+grep: searching a string in a file  / SYNTAX: grep (string) directoryName
+-r: Is making the grep searching in the parent directory and his childs into it
+-l: like -r but it shows the location of directories of the string you searching for
+for EXAMPLE:  grep five -r -l osama (is searching for five word in osama file and display names of files that contains this word)
+
+=============================================================================================
+
+file: type of the file
+command \?: the manual of the command (syntax and how it works etc...)
+CRTL + C : To stop any process
+tree \directory (OR) tree \directory\directory : To show the path
+tasklist: To show what is running on computer rightNow
+
+=============================================================================================
+
+alias: اسم مستعار
+ipconfig: To show your ip
+If you put && between two commands they will apply together / ls && clear
+whoami: Name of user of this pc
+systeminfo: info of pc
+ping (websiteName): shows if a website is working or not / I can make ping google.com > ping-for-google.txt (Save the results of the ping in txt file)
+command | clip: is copying the result of command to clipboard -ForEXAPMLE: ipconfig | clip / Now i can paste the result of this
+If You are in a directory and type name of file on this directory, it will opens / Or typing the path of the file
+mspaint: to open the painter
+code: opens Visual Studio Code
