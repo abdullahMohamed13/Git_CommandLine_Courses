@@ -94,7 +94,16 @@ git clean -f: Delete all files in (git clean -n)
 
 =====================================================================================================
 
+  /\ Reset For Head:
+git log: See the recent commits
+git reset --hard hashNumber of the commit: Remove the commits above the hashNumber
+(Not removing the commit itself [Not removing the commit that has the hashNumber])
+You can get the hashNumber by type git log, and you can see it beside "commit"
+git push origin main --force: Repush the files (Without the commit you deleted)
 
+=====================================================================================================
+
+  /\
 
 =====================================================================================================
 
