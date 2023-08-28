@@ -103,7 +103,26 @@ git push origin main --force: Repush the files (Without the commit you deleted)
 
 =====================================================================================================
 
-  /\
+  /\ .gitignore: How To Ignore A File/Folder/Extension
+1) Make a file called .gitignore: touch .gitignore
+2) Open the file with VS Code: code .gitignore
+3) To ignore a file or a folder type his name: text.txt / main.css / ( pythonFolder/ ) / etc...
+4) To ignore all files with specific extension: *.log / *.html
+5) To ignore all files with specific extension except one file: !name.log / !index.html
+
+  How To Add A File To Staging Area Regardless If He Is Ignored Or Not => Type This:
+git add --f main.css: -f is --force
+
+=====================================================================================================
+
+  /\ Tags:
+1) Lightweight Tag => git tag tagName: Make new tag (Takes her commite message when you do [git commit -m])
+2) Annotated Tag => git tag -a tagName -m "Commit message": Make new tag (You give her commite message)
+git tag: Show tags list
+git tag -l "tagName": To search into tags list .. Example => git tag -l " v1.* " : Searching for all v1.Number
+git push origin tagName: When you push the tag
+git tag -d tagName: To delete a tag LOCALY
+git push origin --delete tagName: To delete a tag REMOTELY
 
 =====================================================================================================
 
