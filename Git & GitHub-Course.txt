@@ -1,0 +1,126 @@
+
+  /\ Informations:
+Repositry (Repo): Like an inventory or the parent of branchs
+Branch: Like a package in the inventory or a son of repo
+Local repo: Pc
+Remote repo: GitHub / GitLab / BitBucket / Centerlize Server ( Company's Server )
+Commit: A checkpoint in your local repo
+Clone: From local or remote
+Push: Upload changes from local to remote
+Pull: Download changes from remote to remote
+Pull Request: Tell others that you made changes to Pull it
+
+=====================================================================================================
+
+In-Cmder:
+git clone (link-of-your-repo): To clone repo that already exist on github.
+git add: add your files to => staging area
+git status: show the status of files (if they are in staging area or not)
+git reset head: if you add a file and wanna remove it from staging area
+git commit -m "text": From staging area => To Local remote
+git remote -v: To see the origin name
+
+=====================================================================================================
+
+  /\ Public Keys:
+ssh-keygen -t rsa -b 4096 -C "Your Email@gmail.com" : To make public key (Now the public key is on my PC in some file)
+cat fileName: To see public key code. Copy it and go to new SSH on git-hub and make paste the public key code
+ssh -T git@github.com: To check that the key is working
+
+=====================================================================================================
+
+**If You have files in your PC and wanna upload to gitHub:**
+git init: To initlize a directory (make it a repo)
+git add (To add)
+git commit -m (To commit)
+git remote add origin linkFromYourGit-hubWhenYouMakingRepo => EXAMPLE => ( git@github.com:abdullahMohamed13/nameOfRepo.git )
+git push -u origin main: To push files you already have on your computer / To push your new files to remote repo
+
+=====================================================================================================
+
+  /\ Push:
+git push (Syntax): git push RemoteName(origin => Git-Hub) BranchName(name of brache, you can get it from => git branch)
+git push -u origin main: To push files you already have on your computer / To push your new files to remote repo
+  /\ Pull:
+git pull RemoteName: Pull the files from the remote repo
+git pull --rebase origin main: If you wanna add file to repo in remote location that you already made
+
+=====================================================================================================
+
+  /\ Config: 
+git config --global -l / git config --list: To show config list
+git config --unset nameOfConfig: To remove a config from the config list
+git config --global nameYouWannaEdit "Value-you-want": If you want to edit on config list with command line
+git config --global --edit: To also edit but with graphical user interface
+..EXAMPLE.. [color "status"] added = green / changed = yellow => this will change the color when you add or change with git status
+
+=====================================================================================================
+
+  /\ Configration & Alias:
+git config --global alias.(aliasNameYouWant) (command): To make alias name
+=> EXAMPLE => git config --global alias.st status
+You can also do: git config --global --edit => Opens VS-Code and you can edit by typing [alias] aliasName = command
+
+=====================================================================================================
+
+  /\ Branches:
+git branch name: Make a new branch
+git branch: See all branches
+git branch -m newName: Change branch name
+git branch -m oldName newName: Change specific branch name
+git checkout branchName: Go to specific branch
+git branch -b branchName: Make branch and go to it
+git branch -d branchName: Safe delete branch (if there is files not merged then it won't delete)
+git branch -D branchName: Force delete branch (Delete anyway)
+
+=====================================================================================================
+
+  /\ Stash:
+git stash: Put all files into stach (Storage)
+git stash pop: Take files that you stashed (From-Storage)  //  git stash pop stash@{number}: Take back specific stash from stash list
+git stash list: Show stash list
+git stash save "Text": Put files into stach and name the stash
+git stash apply: Make copy from last stash you made, and also keep it on stash
+git stash drop: Delete last stash you made  //  git stash drop stash@{number}: Delete specific stash
+git stash show: Show what is inside last stash  //  git stash show stash@{number}: Show what is inside specific stash
+git stash clear: Delete all stashes
+
+=====================================================================================================
+
+  /\ Restore & Clean:
+git restore --staged fileName: If you add file (git add) to staged area and want to make it unstaged
+git clean -n: Show files that you can delete (Files that are'nt in stage area)
+git clean -f: Delete all files in (git clean -n)
+
+=====================================================================================================
+
+  /\ Reset For Head:
+git log: See the recent commits
+git reset --hard hashNumber of the commit: Remove the commits above the hashNumber
+(Not removing the commit itself [Not removing the commit that has the hashNumber])
+You can get the hashNumber by type git log, and you can see it beside "commit"
+git push origin main --force: Repush the files (Without the commit you deleted)
+
+=====================================================================================================
+
+  /\ .gitignore: How To Ignore A File/Folder/Extension
+1) Make a file called .gitignore: touch .gitignore
+2) Open the file with VS Code: code .gitignore
+3) To ignore a file or a folder type his name: text.txt / main.css / ( pythonFolder/ ) / etc...
+4) To ignore all files with specific extension: *.log / *.html
+5) To ignore all files with specific extension except one file: !name.log / !index.html
+
+  How To Add A File To Staging Area Regardless If He Is Ignored Or Not => Type This:
+git add --f main.css: -f is --force
+
+=====================================================================================================
+
+  /\ Tags:
+1) Lightweight Tag => git tag tagName: Make new tag (Takes her commite message when you do [git commit -m])
+2) Annotated Tag => git tag -a tagName -m "Commit message": Make new tag (You give her commite message)
+git tag: Show tags list
+git tag -l "tagName": To search into tags list .. Example => git tag -l " v1.* " : Searching for all v1.Number
+git push origin tagName: When you push the tag
+git tag -d tagName: To delete a tag LOCALY
+git push origin --delete tagName: To delete a tag REMOTELY
+
